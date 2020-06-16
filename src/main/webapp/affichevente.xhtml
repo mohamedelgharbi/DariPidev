@@ -1,0 +1,122 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui"
+	template="/ClientTemplate/template.xhtml">
+	<ui:define name="title">
+		<title>Dari</title>
+	</ui:define>
+	<ui:define name="client">
+		<h:body>
+			<section class="hotel-rooms spad">
+
+				<div class="container">
+					<h:form>
+						<p:commandButton value="statistics"
+							action="#{venteController.barGraph(model)}" />
+					</h:form>
+
+					<div class="row">
+						<ui:repeat var="vente" value="#{venteController.ventes}">
+							<div class="col-lg-4 col-md-6">
+								<div class="room-items">
+									<h:graphicImage value="/upload/#{vente.photoV}" width="500"
+										height="300" />
+
+									<div class="room-text">
+										<div class="room-details">
+											<div class="room-title">
+												<h5>#{vente.typeBien}</h5>
+												<h:outputText value="#{vente.region}"></h:outputText>
+												<h6>#{vente.description}</h6>
+											</div>
+										</div>
+										<div class="room-features">
+											<div class="room-info">
+
+												<div class="beds">
+													<p>Like</p>
+													
+													<span>#{vente.nbLikes}</span>
+												</div>
+												<div class="beds">
+													<p>Dislike</p>
+													
+													<span>#{vente.nbDislikes}</span>
+												</div>
+
+											</div>
+										</div>
+										<div class="room-price">
+											<p>Price</p>
+											<span>#{vente.prix} Dt </span>
+										</div>
+										<br></br>
+										<div class="room-price">
+											<p>Date</p>
+											<span>#{vente.date} </span>
+										</div>
+
+										<h:form>
+											<div align="center">
+
+
+
+												<br></br>
+												<h:panelGroup
+													rendered="#{not empty UsersController.authenticatedUser.id and vente.users.id==UsersController.authenticatedUser.id}">
+													<p:commandButton value="delete"
+														action="#{venteController.removeAd(vente.id)}">
+														
+													</p:commandButton>
+												</h:panelGroup>
+
+												<p:confirmDialog global="true" showEffect="fade"
+													hideEffect="fade">
+												</p:confirmDialog>
+
+
+												<p:commandButton value="Details"
+													action="#{venteController.openDetail(vente)}" />
+												<h:panelGroup
+													rendered="#{not empty UsersController.authenticatedUser.id and vente.users.id==UsersController.authenticatedUser.id}">
+													<p:commandButton value="update"
+														action="#{venteController.displayAd(vente)}" />
+												</h:panelGroup>
+											</div>
+
+											<div align="center">
+												<p:commandButton value="Like"
+													action="#{venteController.incrementlike(vente.id)}" />
+												<p:commandButton value="Dislike"
+													action="#{venteController.incrementdislike(vente.id)}" />
+
+
+											</div>
+										</h:form>
+									</div>
+								</div>
+								<br></br>
+							</div>
+							<br></br>
+
+
+
+						</ui:repeat>
+
+
+					</div>
+
+				</div>
+
+			</section>
+
+
+
+		</h:body>
+	</ui:define>
+
+</ui:composition>
+
+

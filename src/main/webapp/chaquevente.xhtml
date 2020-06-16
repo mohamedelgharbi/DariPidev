@@ -1,0 +1,191 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui"
+	template="/ClientTemplate/template.xhtml"	>
+
+
+
+<ui:define name="title">
+		<title>Dari</title>
+	</ui:define>
+	
+
+	<ui:define name="client">
+
+	<h:body>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+
+
+
+
+
+		<div class="single-property">
+			<div class="container">
+				<div class="row spad-p">
+					<div class="col-lg-12">
+						<div class="property-title">
+							<h3>Household good Type : #{venteController.vente.typeBien}</h3>
+						</div>
+						<div class="property-price">
+							<p>Price</p>
+							<span>#{venteController.vente.prix}</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Single Property End -->
+		<!-- Single Property Deatails Section Begin -->
+
+		<section class="property-details">
+
+			<div class="container">
+				<div class="row sp-40 spt-40">
+					<div class="col-lg-8">
+						<div class="p-ins">
+							<div class="row details-top">
+								<div class="col-lg-12">
+									<div class="t-details">
+										<div class="popular-room-features single-property">
+											<div class="size">
+
+												<div class="garage">
+													<p>Like</p>
+													
+													<span>#{venteController.vente.nbLikes}</span>
+												</div>
+												<div class="garage">
+													<p>Dislike</p>
+													
+													<span>#{venteController.vente.nbDislikes}</span>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<h:form>
+											<div class="property-description">
+												<h4>Description :</h4>
+
+												<h3>#{venteController.vente.description}</h3>
+
+												<h4>Location :</h4>
+
+												<p>#{venteController.vente.region} :
+													#{venteController.vente.adresse}</p>
+												<br></br>
+
+												<ui:repeat var="comment"
+													value="#{venteController.listCommentaire(venteController.vente)}">
+
+													<h:panelGroup rendered="#{!comment.isBlocked}">
+														<h4>#{comment.users.nom} : #{comment.description}</h4>
+
+
+														<p:commandButton class="site-btn c-btn"
+															action="#{venteController.displayComment(comment)}"
+															value="Display comment"></p:commandButton>
+														<p:commandButton class="site-btn c-btn"
+															action="#{venteController.deleteComment(comment.id)}"
+															value="delete comment">
+															<p:confirm header="Confirmation" message="Are you sure?"
+																icon="pi pi-exclamation-triangle" />
+														</p:commandButton>
+
+
+														
+
+													</h:panelGroup>
+												</ui:repeat>
+												<h4>Add comment :</h4>
+												<h:inputText value="#{venteController.newComment}">
+													<f:ajax event="blur"></f:ajax>
+												</h:inputText>
+												<p:commandButton class="site-btn c-btn"
+													action="#{venteController.addComment()}"
+													value="Add comment">
+												</p:commandButton>
+												<p:commandButton class="site-btn c-btn"
+													action="#{venteController.updateComment()}"
+													value="Update comment"></p:commandButton>
+												<br></br> <br></br>
+												
+												
+												<br></br>
+
+											</div>
+
+
+
+										</h:form>
+
+
+										<div class="location-map">
+											<h4>#{venteController.vente.region}</h4>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-lg-4">
+							<div class="row pb-30">
+								<div class="col-lg-12">
+									<div class="contact-service">
+										<p:graphicImage name="test/img/single-property/small.png"
+											alt="" />
+										<!-- <p:graphicImage name="test/img/blog/1_agent.png" alt="" /> -->
+										<h5>Posted By</h5>
+										<table>
+											<tr>
+												<td>User name : <span>#{venteController.vente.users.nom}</span></td>
+											</tr>
+											<tr>
+
+												<td>Email : <span>#{venteController.vente.users.email}</span></td>
+											</tr>
+										</table>
+
+										<h:panelGrid>
+											<h:form>
+												<h:commandButton class="site-btn list-btn"
+													value="Contact Seller" action="#{venteController.send()}" />
+											</h:form>
+										</h:panelGrid>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+	
+
+
+
+
+
+
+	</h:body>
+</ui:define>
+
+</ui:composition>
+
+

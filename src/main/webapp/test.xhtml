@@ -1,0 +1,128 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+	<ui:define name="classe">
+		<!-- Formulaire d'ajout  -->
+
+
+		<h:panelGroup columns="2">
+			<h:form>
+
+				<table>
+
+					<tr>
+						<td><h:outputText value="Choix Ville"></h:outputText></td>
+						<td><h:selectOneMenu value="#{estimationController.ville}">
+								<f:selectItem itemLabel="Ville" itemValue="#{null}" />
+								<f:selectItems value="#{estimationController.villes}" />
+							</h:selectOneMenu></td>
+
+					</tr>
+
+					<tr>
+						<td><h:outputText value="Surface Totale"></h:outputText></td>
+						<td><h:inputText value="#{estimationController.surfaceTotal}"></h:inputText></td>
+					</tr>
+
+					<tr>
+						<td><h:outputText value="Surface Construit"></h:outputText></td>
+						<td><h:inputText
+								value="#{estimationController.surfaceConstruit}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Nombre piece"></h:outputText></td>
+						<td><h:inputText value="#{estimationController.nbpiece}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Nombre chambres"></h:outputText></td>
+						<td><h:inputText value="#{estimationController.nbchambre}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Nombres Toillete"></h:outputText></td>
+						<td><h:inputText value="#{estimationController.nbbathrooms}"></h:inputText></td>
+					</tr>
+
+					<tr>
+						<td><h:outputText value="Balcon"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.balcon}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Terrace"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.terrace}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Jardin"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.garden}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Garage"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.garage}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Picine"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.swimmingpool}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Climatisation"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.airconditioning}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="chauffage"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.heater}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Cave"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.cave}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Alarme"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.alarme}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Calme"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.calme}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Dependance"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{estimationController.dependance}"></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Estimation"></h:outputText></td>
+						<td><h:inputText value="#{estimationController.result}"></h:inputText></td>
+					</tr>
+
+
+					<tr>
+						<td colspan="2"><h:commandButton value="Estimation Home"
+								action="#{estimationController.estimate()}"></h:commandButton></td>
+
+
+					</tr>
+
+					<tr>
+						<td colspan="2"><h:commandButton value="Prix Update"
+								action="#{estimationController.allcity()}"></h:commandButton></td>
+
+
+					</tr>
+					
+				</table>
+			</h:form>
+		</h:panelGroup>
+
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,151 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui">
+
+	<style type="text/css">
+.color {
+	BackColor: #F0F0F0;
+}
+</style>
+
+
+	<h:head>
+		<title>Dari</title>
+
+
+
+		<!-- Google Font -->
+		
+
+
+
+
+	</h:head>
+
+	<body>
+		
+		<header class="header-section">
+		
+		</header>
+		
+		<div class="map-section">
+			<div class="container-fluid">
+				<div class="row">
+				</div>
+			</div>
+		</div>
+		<!-- Map Section End -->
+		<!-- Contact Section Begin -->
+		<section class="contact-section">
+			<div class="container">
+				<div class="contact-form">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="contact-form">
+								<h4>Add Your Household good</h4>
+
+								<p:growl id="messages" showDetail="true" />
+								<h:form enctype="multipart/form-data">
+									<p:growl id="msg" />
+
+
+									<div class="row">
+										<div class="col-lg-6">
+											<p:fileUpload value="#{venteController.file}" mode="simple"
+												skinSimple="true" />
+										</div>
+
+									</div>
+
+									<div class="row">
+										<div class="col-lg-6">
+											<h:outputText value="Deco type :"></h:outputText>
+										</div>
+										<div class="col-lg-6">
+											<h:selectOneMenu value="#{venteController.typeBien}"
+												class="color">
+												<f:selectItem itemLabel="Choose your deco type"
+													itemValue="#{null}" />
+												<f:selectItems value="#{venteController.typebiens}" />
+
+											</h:selectOneMenu>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-6">
+											<h:outputText value="State :"></h:outputText>
+										</div>
+										<div class="col-lg-6">
+											<h:selectOneMenu value="#{venteController.state}">
+												<f:selectItem itemLabel="Choose your state"
+													itemValue="#{null}" />
+												<f:selectItems value="#{venteController.states}" />
+
+											</h:selectOneMenu>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-6">
+											<h:outputText value="Region :"></h:outputText>
+										</div>
+										<div class="col-lg-6">
+											<h:selectOneMenu value="#{venteController.region}">
+												<f:selectItem itemLabel="Choose your region"
+													itemValue="#{null}" />
+												<f:selectItems value="#{venteController.regions}" />
+
+											</h:selectOneMenu>
+										</div>
+									</div>
+									<br />
+									<div class="row">
+										<div class="col-lg-6">
+											<h:outputText value="Address :"></h:outputText>
+											<h:inputText value="#{venteController.adresse}"></h:inputText>
+										</div>
+										
+									</div>
+
+									<h:outputText value="Description of your deco :"></h:outputText>
+									<h:inputTextarea value="#{venteController.description}"></h:inputTextarea>
+
+									<h:outputText value="Price :"></h:outputText>
+									<h:inputText value="#{venteController.prix}"></h:inputText>
+
+
+
+									
+
+
+
+									<br />
+									<p:commandButton class="site-btn c-btn" value="Submit"
+										ajax="false" action="#{venteController.addad()}" />
+									<p:notificationBar position="top" effect="slide"
+										styleClass="top" widgetVar="bar">
+										<h:outputText value="your Household good Ad has been saved"
+											style="font-size:36px;" />
+									</p:notificationBar>
+								</h:form>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Section End -->
+		<!-- Footer Section Begin -->
+		<footer class="footer-section p-40">
+			
+		</footer>
+		<!-- Footer Section End -->
+
+		<!-- Js Plugins -->
+		
+
+	</body>
+
+</ui:composition>

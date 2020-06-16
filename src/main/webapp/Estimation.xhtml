@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	template="/ClientTemplate/template.xhtml">
+	<ui:define name="title">
+		<title>Dari</title>
+	</ui:define>
+	<ui:define name="client">
+		<!-- Breadcrumb Section Begin -->
+		<section class="breadcrumb-section spad set-bg"
+			data-setbg="img/breadcrumb-contact-bg.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="breadcrumb-text">
+						<h4>Estimation</h4>
+						<div class="bt-option">
+							<a href=""><i class="fa fa-home"></i> Home</a> <span>Estimation</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<!-- Breadcrumb Section End -->
+		<!-- Property Submit Section Begin -->
+		<section class="property-submit-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="property-submit-form">
+						<h:form>
+							<div class="pf-map">
+								<h4>Estimation</h4>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="map-inputs">
+											<table>
+
+												<tr>
+													<td><h:outputText value="Choix Ville"></h:outputText></td>
+													<td><h:selectOneMenu
+															value="#{estimationController.ville}">
+															<f:selectItem itemLabel="Ville" itemValue="#{null}" />
+															<f:selectItems value="#{estimationController.villes}" />
+														</h:selectOneMenu></td>
+
+												</tr>
+
+												<tr>
+													<td><h:outputText value="Surface Totale"></h:outputText></td>
+													<td><h:inputText
+															value="#{estimationController.surfaceTotal}"></h:inputText></td>
+												</tr>
+
+												<tr>
+													<td><h:outputText value="Surface Construit"></h:outputText></td>
+													<td><h:inputText
+															value="#{estimationController.surfaceConstruit}"></h:inputText></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Nombre piece"></h:outputText></td>
+													<td><h:inputText
+															value="#{estimationController.nbpiece}"></h:inputText></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Nombre chambres"></h:outputText></td>
+													<td><h:inputText
+															value="#{estimationController.nbchambre}"></h:inputText></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Nombres Toillete"></h:outputText></td>
+													<td><h:inputText
+															value="#{estimationController.nbbathrooms}"></h:inputText></td>
+												</tr>
+
+												<tr>
+													<td><h:outputText value="Balcon"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.balcon}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Terrace"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.terrace}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Jardin"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.garden}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Garage"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.garage}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Picine"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.swimmingpool}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Climatisation"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.airconditioning}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="chauffage"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.heater}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Cave"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.cave}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Alarme"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.alarme}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Calme"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.calme}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Dependance"></h:outputText></td>
+													<td><h:selectBooleanCheckbox
+															value="#{estimationController.dependance}"></h:selectBooleanCheckbox></td>
+												</tr>
+												<tr>
+													<td><h:outputText value="Estimation"></h:outputText></td>
+													<td><h:inputText
+															value="#{estimationController.result}"></h:inputText></td>
+												</tr>
+
+
+
+
+											</table>
+
+										</div>
+
+									</div>
+									<div class="col-lg-8">
+										<div class="g-map">
+											<img src="" />
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="pf-map">
+
+								<div class="row">
+									<div class="col-lg-4">
+
+										<h:commandButton value="Estimation Home" class="site-btn"
+											action="#{estimationController.estimate()}"></h:commandButton>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+
+										<h:commandButton value="Prix Update" class="site-btn"
+											action="#{estimationController.allcity()}"></h:commandButton>
+
+
+									</div>
+
+								</div>
+							</div>
+
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<!-- Property Submit Section End -->
+
+
+		<!-- Contact Section Begin -->
+		<section class="contact-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="contact-info">
+						<div class="ci-item">
+							<div class="ci-icon">
+								<i class="fa fa-map-marker"></i>
+							</div>
+							<div class="ci-text">
+								<h5>Address</h5>
+								<p>1, 2 rue André Ampère - 2083 - Pôle Technologique - El
+									Ghazala.</p>
+							</div>
+						</div>
+						<div class="ci-item">
+							<div class="ci-icon">
+								<i class="fa fa-mobile"></i>
+							</div>
+							<div class="ci-text">
+								<h5>Phone</h5>
+								<ul>
+									<li>T (216) 70 250 000</li>
+									<li>T (216) 70 251 000</li>
+								</ul>
+							</div>
+						</div>
+						<div class="ci-item">
+							<div class="ci-icon">
+								<i class="fa fa-headphones"></i>
+							</div>
+							<div class="ci-text">
+								<h5>Support</h5>
+								<p>Support.Dari@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cs-map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d735515.5813275519!2d-80.41163541934742!3d43.93644386501528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882a55bbf3de23d7%3A0x3ada5af229b47375!2sMono%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1583262687289!5m2!1sen!2sbd"
+				height="450" style="border: 0;" allowfullscreen="" />
+		</div>
+		</section>
+		<!-- Contact Section End -->
+
+	</ui:define>
+</ui:composition>

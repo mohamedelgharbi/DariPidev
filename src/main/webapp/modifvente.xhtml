@@ -1,0 +1,180 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui">
+
+
+
+
+	<h:head>
+		<title>Dari</title>
+
+
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+			rel="stylesheet" />
+
+
+		<h:outputStylesheet library="test" name="css/bootstrap.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/font-awesome.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/nice-select.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/owl.carousel.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/jquery-ui.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/slicknav.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/flaticon.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/style.css"></h:outputStylesheet>
+
+
+	</h:head>
+
+	<body>
+		<!-- Page Preloder -->
+		<div id="preloder">
+			<div class="loader"></div>
+		</div>
+		<!-- Header Section Begin -->
+		<header class="header-section">
+			
+		</header>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+			
+		
+		<!-- Hero Section End -->
+		
+		<!-- Contact Section Begin -->
+		<section class="contact-section">
+			<div class="container">
+				<div class="contact-form">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="contact-form">
+								<h4>Modify Your Household good</h4>
+
+								<p:growl id="messages" showDetail="true" />
+								<h:form enctype="multipart/form-data">
+									<div class="row">
+										<div class="col-lg-6">
+											<p:fileUpload value="#{venteController.file}" mode="simple"
+												skinSimple="true" />
+										</div>
+
+									</div>
+									<div class="row">
+										<div class="col-lg-6">
+											<h:outputText value="Property type :"></h:outputText>
+										</div>
+										<div class="col-lg-6">
+											<h:selectOneMenu value="#{venteController.typeBien}">
+												<f:selectItem itemLabel="Choose your property type"
+													itemValue="#{null}" />
+												<f:selectItems value="#{venteController.typebiens}" />
+
+											</h:selectOneMenu>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-6">
+											<h:outputText value="State :"></h:outputText>
+										</div>
+										<div class="col-lg-6">
+											<h:selectOneMenu value="#{venteController.state}">
+												<f:selectItem itemLabel="Choose your state"
+													itemValue="#{null}" />
+												<f:selectItems value="#{venteController.states}" />
+
+											</h:selectOneMenu>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-6">
+											<h:outputText value="Region :"></h:outputText>
+										</div>
+										<div class="col-lg-6">
+											<h:selectOneMenu value="#{venteController.region}">
+												<f:selectItem itemLabel="Choose your region"
+													itemValue="#{null}" />
+												<f:selectItems value="#{venteController.regions}" />
+
+											</h:selectOneMenu>
+										</div>
+									</div>
+									<br />
+									<div class="row">
+										<div class="col-lg-6">
+											<h:outputText value="Address :"></h:outputText>
+											<h:inputText value="#{venteController.adresse}"></h:inputText>
+										</div>
+										
+									</div>
+
+									<h:outputText value="Description of your house:"></h:outputText>
+									<h:inputTextarea value="#{venteController.description}"></h:inputTextarea>
+
+									<h:outputText value="Price:"></h:outputText>
+									<h:inputText value="#{venteController.prix}"></h:inputText>
+
+									
+
+									<br />
+									<p:commandButton class="site-btn c-btn" value="Modify Your furniture"
+										action="#{venteController.updateAd()}"
+										onclick="PF('bar').show()" />
+									<p:notificationBar position="top" effect="slide"
+										styleClass="top" widgetVar="bar">
+										<h:outputText value="your Furniture has been saved"
+											style="font-size:36px;" />
+									</p:notificationBar>
+
+								</h:form>
+
+
+
+						
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="contact-info">
+								<h4>Contact Details</h4>
+								<div class="contact-service">
+									<p:graphicImage name="test/img/single-property/small.png"
+										alt="" />
+									<!-- <p:graphicImage name="test/img/blog/1_agent.png" alt="" /> -->
+									<h5>Posted By</h5>
+									<table>
+										<tr>
+											<td>User name : <span>#{venteController.vente.users.nom}</span></td>
+										</tr>
+										<tr>
+											<td>Email : <span>#{venteController.vente.users.email}</span></td>
+										</tr>
+									</table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Section End -->
+		<!-- Footer Section Begin -->
+	
+		<!-- Footer Section End -->
+
+		<!-- Js Plugins -->
+		<script src="/test/js/jquery-3.3.1.min.js"></script>
+		<script src="/test/js/bootstrap.min.js"></script>
+		<script src="/test/js/jquery.nice-select.min.js"></script>
+		<script src="/test/js/owl.carousel.min.js"></script>
+		<script src="/test/js/jquery-ui.min.js"></script>
+		<script src="/test/js/jquery.slicknav.js"></script>
+		<script src="/test/js/main.js"></script>
+
+
+	</body>
+
+</ui:composition>

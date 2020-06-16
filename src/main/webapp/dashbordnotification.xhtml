@@ -1,0 +1,89 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui"
+	>
+
+	<h:head>
+		<!-- Required meta tags-->
+
+
+		<title>Dari Notiffffff</title>
+
+
+
+
+
+	</h:head>
+
+
+
+	<h:body>
+		<div>
+
+			<aside>
+				<div>
+
+					<nav>
+						<ul>
+
+							<li><a href="/dashbordvente.jsf"> <i></i>Ventessss
+							</a> <span></span></li>
+
+						</ul>
+					</nav>
+				</div>
+			</aside>
+
+			<div>
+				<header>
+					<div></div>
+				</header>
+
+				<section>
+					<div>
+
+						<h:form>
+							<table>
+								<ui:repeat var="notif"
+									value="#{notificationController.notifications}">
+									<tbody>
+										<tr>
+
+											<td><span>the user : #{notif.user.nom}</span></td>
+
+											<h:panelGroup rendered="#{notif.action =='0'}">
+												<td><span>#{notif.message} :</span></td>
+											</h:panelGroup>
+											<h:panelGroup rendered="#{notif.action =='1'}">
+												<td><span>#{notif.message} :</span></td>
+											</h:panelGroup>
+
+											<td><h:commandButton value="#{notif.vente.id}"
+													action="#{venteController.openDetailnotification(notif.vente)}" /></td>
+											<td>At : #{notif.createdAt}</td>
+
+
+										</tr>
+										<tr></tr>
+									</tbody>
+								</ui:repeat>
+							</table>
+						</h:form>
+					</div>
+				</section>
+
+
+			</div>
+
+		</div>
+
+
+		<!-- Main JS-->
+		<script src="js/main.js"></script>
+
+	</h:body>
+
+
+</ui:composition>
