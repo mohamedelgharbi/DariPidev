@@ -1,8 +1,6 @@
 package tn.esprit.spring.entity;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -15,7 +13,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -97,15 +94,15 @@ public class Users implements UserDetails {
 		this.password = password;
 		this.roles = role;
 	}
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
+	
+	/*public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
 		  List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
 	        SimpleGrantedAuthority simpleGrantedAuthority = new SimpleGrantedAuthority(this.getRoles().getType() );
 	        grantedAuthorityList.add(simpleGrantedAuthority);
 	        return grantedAuthorityList;
-	}
-	@Override
+	}*/
+
 	public String getUsername() {
 		// TODO Auto-generated method stub
 		return this.getEmail();
@@ -129,6 +126,11 @@ public class Users implements UserDetails {
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
 		return true;
+	}
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
