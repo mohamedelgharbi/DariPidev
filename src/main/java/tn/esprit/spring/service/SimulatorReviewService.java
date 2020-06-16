@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tn.esprit.spring.entities.SimulatorReview;
-import tn.esprit.spring.repositories.SimulatorReviewRepository;
+import tn.esprit.spring.entity.SimulatorReview;
+import tn.esprit.spring.repository.SimulatorReviewRepository;
 
 @Service
 public class SimulatorReviewService implements ISimulatorReviewService {

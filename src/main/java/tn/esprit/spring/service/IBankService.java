@@ -2,7 +2,7 @@ package tn.esprit.spring.service;
 
 import java.util.List;
 
-import tn.esprit.spring.entities.Bank;
+import tn.esprit.spring.entity.Bank;
 
 public interface IBankService {
 	public List<Bank> getAllBanks();

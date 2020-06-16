@@ -6,10 +6,10 @@ import org.ocpsoft.rewrite.el.ELBeanName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import tn.esprit.spring.entities.Bank;
-import tn.esprit.spring.entities.BankOffers;
-import tn.esprit.spring.entities.InterestType;
-import tn.esprit.spring.repositories.BankOffersRepository;
+import tn.esprit.spring.entity.Bank;
+import tn.esprit.spring.entity.BankOffers;
+import tn.esprit.spring.entity.InterestType;
+import tn.esprit.spring.repository.BankOffersRepository;
 
 //@Scope(value = "session")
 @Controller(value = "stockofferController")

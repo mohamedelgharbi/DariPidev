@@ -4,7 +4,6 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.file.Paths;
-
 import java.util.Date;
 import java.util.List;
 
@@ -13,11 +12,9 @@ import javax.validation.Valid;
 import org.ocpsoft.rewrite.el.ELBeanName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,9 +22,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import tn.esprit.spring.entities.Bank;
-
-import tn.esprit.spring.services.IBankService;
+import tn.esprit.spring.entity.Bank;
+import tn.esprit.spring.service.IBankService;
 
 @Scope(value = "session")
 @Controller(value = "bankController")

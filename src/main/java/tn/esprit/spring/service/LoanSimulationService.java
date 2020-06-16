@@ -8,13 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-import tn.esprit.spring.entities.BankOffers;
-import tn.esprit.spring.entities.Category;
-import tn.esprit.spring.entities.LoanSimulation;
-import tn.esprit.spring.entities.User;
-import tn.esprit.spring.repositories.BankOffersRepository;
-import tn.esprit.spring.repositories.LoanSimulationRepository;
-import tn.esprit.spring.repositories.UserRepository;
+import tn.esprit.spring.entity.BankOffers;
+import tn.esprit.spring.entity.Category;
+import tn.esprit.spring.entity.LoanSimulation;
+import tn.esprit.spring.entity.User;
+import tn.esprit.spring.repository.BankOffersRepository;
+import tn.esprit.spring.repository.LoanSimulationRepository;
+import tn.esprit.spring.repository.UserRepository;
 
 @Service
 public class LoanSimulationService implements ILoanSimulationService {

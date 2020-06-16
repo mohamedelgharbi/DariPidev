@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import tn.esprit.spring.entities.LoanSimulation;
-import tn.esprit.spring.services.IBankOffersService;
-import tn.esprit.spring.services.ILoanSimulationService;
+
+import tn.esprit.spring.entity.LoanSimulation;
+import tn.esprit.spring.service.IBankOffersService;
+import tn.esprit.spring.service.ILoanSimulationService;
 
 @RestController
 public class LoanSimulationRestController {

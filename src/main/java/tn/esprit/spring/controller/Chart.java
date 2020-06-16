@@ -19,11 +19,11 @@ import org.primefaces.model.chart.PieChartModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import tn.esprit.spring.entities.BankOffers;
-import tn.esprit.spring.entities.LoanSimulation;
-import tn.esprit.spring.services.IBankOffersService;
-import tn.esprit.spring.services.IBankService;
-import tn.esprit.spring.services.ILoanSimulationService;
+import tn.esprit.spring.entity.BankOffers;
+import tn.esprit.spring.entity.LoanSimulation;
+import tn.esprit.spring.service.IBankOffersService;
+import tn.esprit.spring.service.IBankService;
+import tn.esprit.spring.service.ILoanSimulationService;
 
 @Controller(value = "chartsimulation")
 @ELBeanName(value = "chartsimulation")

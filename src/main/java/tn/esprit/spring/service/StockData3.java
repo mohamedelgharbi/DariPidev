@@ -7,13 +7,13 @@ import org.ocpsoft.rewrite.el.ELBeanName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import tn.esprit.spring.entities.Bank;
-import tn.esprit.spring.entities.BankOffers;
-import tn.esprit.spring.entities.Category;
-import tn.esprit.spring.entities.LoanSimulation;
-import tn.esprit.spring.entities.User;
-import tn.esprit.spring.repositories.BankOffersRepository;
-import tn.esprit.spring.repositories.LoanSimulationRepository;
+import tn.esprit.spring.entity.Bank;
+import tn.esprit.spring.entity.BankOffers;
+import tn.esprit.spring.entity.Category;
+import tn.esprit.spring.entity.LoanSimulation;
+import tn.esprit.spring.entity.User;
+import tn.esprit.spring.repository.BankOffersRepository;
+import tn.esprit.spring.repository.LoanSimulationRepository;
 
 //@Scope(value = "session")
 @Controller(value = "stocksimulationController")

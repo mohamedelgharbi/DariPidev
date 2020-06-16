@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tn.esprit.spring.entities.Bank;
-import tn.esprit.spring.services.IBankService;
+import tn.esprit.spring.entity.Bank;
+import tn.esprit.spring.service.IBankService;
 
 @RestController
 public class BankRestController {

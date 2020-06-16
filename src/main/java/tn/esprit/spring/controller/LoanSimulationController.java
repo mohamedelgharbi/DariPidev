@@ -10,29 +10,29 @@ import javax.faces.context.FacesContext;
 
 import org.ocpsoft.rewrite.annotation.Join;
 import org.ocpsoft.rewrite.el.ELBeanName;
-import org.primefaces.context.RequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.support.RequestContext;
 
-import tn.esprit.spring.entities.Bank;
-import tn.esprit.spring.entities.BankOffers;
-import tn.esprit.spring.entities.Category;
-import tn.esprit.spring.entities.InterestType;
-import tn.esprit.spring.entities.LoanSimulation;
-import tn.esprit.spring.entities.RestrictWord;
-import tn.esprit.spring.entities.Role;
-import tn.esprit.spring.entities.SimulatorReview;
-import tn.esprit.spring.entities.User;
-import tn.esprit.spring.repositories.BankOffersRepository;
-import tn.esprit.spring.repositories.LoanSimulationRepository;
-import tn.esprit.spring.repositories.UserRepository;
-import tn.esprit.spring.services.IBankOffersService;
-import tn.esprit.spring.services.IBankService;
-import tn.esprit.spring.services.ILoanSimulationService;
-import tn.esprit.spring.services.ISimulatorReviewService;
-import tn.esprit.spring.services.IUserService;
-import tn.esprit.spring.services.RestrictWordService;
+import tn.esprit.spring.entity.Bank;
+import tn.esprit.spring.entity.BankOffers;
+import tn.esprit.spring.entity.Category;
+import tn.esprit.spring.entity.InterestType;
+import tn.esprit.spring.entity.LoanSimulation;
+import tn.esprit.spring.entity.RestrictWord;
+import tn.esprit.spring.entity.Role;
+import tn.esprit.spring.entity.SimulatorReview;
+import tn.esprit.spring.entity.User;
+import tn.esprit.spring.repository.BankOffersRepository;
+import tn.esprit.spring.repository.LoanSimulationRepository;
+import tn.esprit.spring.repository.UserRepository;
+import tn.esprit.spring.service.IBankOffersService;
+import tn.esprit.spring.service.IBankService;
+import tn.esprit.spring.service.ILoanSimulationService;
+import tn.esprit.spring.service.ISimulatorReviewService;
+import tn.esprit.spring.service.IUserService;
+import tn.esprit.spring.service.RestrictWordService;
 import tn.esprit.spring.utility.MailSenderToAdministration;
 
 @Scope(value = "session")
@@ -1002,8 +1002,8 @@ public class LoanSimulationController {
 	}
 
 	// ---------------------------------------------------charts-----------------------------------
-	public void alert() {
+/*	public void alert() {
 		RequestContext context = RequestContext.getCurrentInstance();
 		context.execute("swal('Success !! log in is done')");
-	}
+	}*/
 }

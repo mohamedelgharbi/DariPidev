@@ -2,7 +2,7 @@ package tn.esprit.spring.service;
 
 import java.util.List;
 
-import tn.esprit.spring.entities.SimulatorReview;
+import tn.esprit.spring.entity.SimulatorReview;
 
 public interface ISimulatorReviewService {
 

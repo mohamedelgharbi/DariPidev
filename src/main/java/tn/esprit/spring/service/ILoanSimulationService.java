@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.ui.Model;
 
-import tn.esprit.spring.entities.Category;
-import tn.esprit.spring.entities.LoanSimulation;
+import tn.esprit.spring.entity.Category;
+import tn.esprit.spring.entity.LoanSimulation;
 
 public interface ILoanSimulationService {
 

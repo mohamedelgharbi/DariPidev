@@ -2,7 +2,7 @@ package tn.esprit.spring.service;
 
 import java.util.List;
 
-import tn.esprit.spring.entities.User;
+import tn.esprit.spring.entity.User;
 
 public interface IUserService {
 	public User authenticate(String login, String password);

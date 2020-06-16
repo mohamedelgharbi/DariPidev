@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tn.esprit.spring.entities.Bank;
-import tn.esprit.spring.repositories.BankRepository;
+import tn.esprit.spring.entity.Bank;
+import tn.esprit.spring.repository.BankRepository;
 
 @Service
 public class BankService implements IBankService {

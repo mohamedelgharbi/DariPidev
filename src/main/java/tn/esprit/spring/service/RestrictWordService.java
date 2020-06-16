@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import tn.esprit.spring.repositories.*;
-import tn.esprit.spring.entities.RestrictWord;
+import tn.esprit.spring.entity.RestrictWord;
+import tn.esprit.spring.repository.RestrictWordRepository;
 
 @Service
 public class RestrictWordService {

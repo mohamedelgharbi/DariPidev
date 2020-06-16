@@ -4,9 +4,9 @@ import org.ocpsoft.rewrite.el.ELBeanName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import tn.esprit.spring.entities.Role;
-import tn.esprit.spring.entities.User;
-import tn.esprit.spring.repositories.UserRepository;
+import tn.esprit.spring.entity.Role;
+import tn.esprit.spring.entity.User;
+import tn.esprit.spring.repository.UserRepository;
 import tn.esprit.spring.utility.MailSender;
 
 //@Scope(value = "session")

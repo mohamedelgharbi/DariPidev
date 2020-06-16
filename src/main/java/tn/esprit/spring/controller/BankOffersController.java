@@ -8,14 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import tn.esprit.spring.entities.Bank;
-import tn.esprit.spring.entities.BankOffers;
-import tn.esprit.spring.entities.InterestType;
-
-import tn.esprit.spring.repositories.BankOffersRepository;
-import tn.esprit.spring.repositories.BankRepository;
-import tn.esprit.spring.services.IBankOffersService;
-import tn.esprit.spring.services.IBankService;
+import tn.esprit.spring.entity.Bank;
+import tn.esprit.spring.entity.BankOffers;
+import tn.esprit.spring.entity.InterestType;
+import tn.esprit.spring.repository.BankOffersRepository;
+import tn.esprit.spring.repository.BankRepository;
+import tn.esprit.spring.service.IBankOffersService;
+import tn.esprit.spring.service.IBankService;
 
 @Scope(value = "session")
 @Controller(value = "bankOfferController")

@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-import tn.esprit.spring.entities.BankOffers;;
+import tn.esprit.spring.entity.BankOffers;;
 
 public interface BankOffersRepository extends CrudRepository<BankOffers, Integer> {
 

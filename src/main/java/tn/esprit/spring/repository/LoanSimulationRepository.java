@@ -8,8 +8,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import tn.esprit.spring.entities.Category;
-import tn.esprit.spring.entities.LoanSimulation;
+import tn.esprit.spring.entity.Category;
+import tn.esprit.spring.entity.LoanSimulation;
 
 public interface LoanSimulationRepository extends CrudRepository<LoanSimulation, Integer> {
 

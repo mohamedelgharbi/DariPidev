@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import tn.esprit.spring.entities.RestrictWord;
+import tn.esprit.spring.entity.RestrictWord;
 
 @Repository
 public interface RestrictWordRepository extends CrudRepository<RestrictWord, Integer> {

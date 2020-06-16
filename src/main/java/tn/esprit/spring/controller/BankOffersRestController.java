@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tn.esprit.spring.entities.BankOffers;
-import tn.esprit.spring.services.IBankOffersService;
-import tn.esprit.spring.services.IBankService;
+import tn.esprit.spring.entity.BankOffers;
+import tn.esprit.spring.service.IBankOffersService;
+import tn.esprit.spring.service.IBankService;
 
 @RestController
 public class BankOffersRestController {
